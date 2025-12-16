@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groen & gewoon doen</title>
+</head>
+<body>
+
+  <a href="Index.html">Terug</a>
+  <br><br>
+
+  <h2>Admin Pagina - Bestellingen Overzicht</h2>
+
+  <!-- Hier komt straks de JSON data te staan -->
+  <pre id="Json_Data">Laden...</pre>
+
+  <script>
+    // Haal het bestand Orders.json op
+    fetch('../Data/Orders.json')
+
+      // Zet de response om naar echte JSON
+      .then(r => r.json())
+
+      // Als de JSON binnen is
+      .then(data => {
+
+        // Zet de JSON als tekst op de pagina
+        // JSON.stringify = maakt van data leesbare tekst
+        // null, 2 = zorgt voor nette inspringing
+        document.getElementById("Json_Data").innerHTML =
+          JSON.stringify(data, null, 2);
+      })
+
+      // Als er iets fout gaat word dat hier mee gehandeld
+      .catch(() => {
+
+        // Laat foutmelding zien op de pagina
+        document.getElementById("Json_Data").innerHTML =
+          "Kan Orders.json niet laden";
+      });
+  </script>
+
+</body>
+</html>

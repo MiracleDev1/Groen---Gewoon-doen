@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakket selectie</title>
+</head>
+<body>
+
+  <a href="Diensten.html">Terug</a>
+  <br><br>
+  <h2>Kies een pakket:</h2>
+
+  <input type="button" class="option-btn" value="Gazon maaien, €45 per beurt" onclick="selectOption(this)">
+  <input type="button" class="option-btn" value="Tuinonderhoud, €89 per beurt" onclick="selectOption(this)">
+  <input type="button" class="option-btn" value="Voorjaarsbeurt, €125 per beurt" onclick="selectOption(this)">
+
+  <p id="chosenText">Nog niks gekozen</p>
+
+  <script>
+    function selectOption(button) {
+      document.getElementById("chosenText").innerHTML =
+        "Gekozen: " + button.value;
+    }
+  </script>
+
+</body>
+</html>

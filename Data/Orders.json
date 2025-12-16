@@ -1,0 +1,6 @@
+{
+  "Orders":[
+    {"Klant1":"Jantje", "Pakket": "Custom", "Prijs":"€75"},
+    {"Klant2":"Sandra", "Pakket": "Standaard", "Prijs":"€45"}
+  ]
+}

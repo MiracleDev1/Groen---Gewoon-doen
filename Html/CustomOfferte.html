@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="Diensten.html">Terug</a>
+  <br><br>
+
+  <h2>Selecteer werkzaamheden</h2>
+  
+  <a>m² gras</a>
+  <br>
+  <input type="number" id="gras" min="0">
+  <br><br>
+
+  <a>m² tegels</a>
+  <br>
+  <input type="number" id="tegels" min="0">
+
+  <br><br>
+  Extra's:
+  <br>
+
+  <input type="checkbox" id="betegelen">Betegelen
+  <br>
+  <input type="checkbox" id="maaien">Gazon maaien
+
+  <h2>Offerte Overzicht</h2>
+  <a id="TotaalBedrag">Totaal bedrag: €</a>
+  <br>
+  <input type="button" value="bereken" onclick="BerekenTotaalBedrag();">
+
+  <script>
+    let totaal = 0;
+
+    function BerekenTotaalBedrag() {
+      totaal = 0;
+      
+      //Als er een value is ingevuld bij gras of tegels wordt dat vermenigvuldigd met de prijs per m²
+      totaal = totaal + document.getElementById("gras").value * 5;
+      totaal = totaal + document.getElementById("tegels").value * 10;
+
+      //als checkbox is aangevinkt, doe het toaal +100
+      if (document.getElementById("betegelen").checked) {
+        totaal = totaal + 100;
+      }
+
+      //als checkbox is aangevinkt, doe het toaal +50
+      if (document.getElementById("maaien").checked) {
+        totaal = totaal + 50;
+      }
+
+      //Dit zet het totaal bedrag in de pagina zodat je de prijs kan zien.
+      document.getElementById("TotaalBedrag").innerHTML =
+        "Totaal bedrag: €" + totaal;
+    }
+
+  </script>
+
+</body>
+</html>
