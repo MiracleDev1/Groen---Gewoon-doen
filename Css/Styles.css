@@ -1,0 +1,34 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: white;
+  color: #222;
+  margin: 16px;
+}
+
+/* link */
+a {
+  color: #2e8b57;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* knop */
+button {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #5fa97f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  scale: 105%;
+}
